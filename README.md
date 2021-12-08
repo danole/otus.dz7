@@ -26,8 +26,3 @@ WebDriver wd = WebDriverFactory.createNewDriver("firefox", options);
 Авторизоваться на сайте
 Войти в личный кабинет
 Проверить, что в разделе "О себе" отображаются указанные ранее данные
-
-Запуск:
-
-mvn clean test -Dlogin="логин" -Dpassword="пароль" -Dwd="браузер" -Doptions="опция" , с заданным options
-mvn clean test -Dlogin="логин" -Dpassword="пароль" -Dwd="браузер" -Doptions="" , без options
