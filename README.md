@@ -11,13 +11,13 @@
 
 Примеры использования
   
-  WebDriver wd = WebDriverFactory.createNewDriver("chrome"); 
+    WebDriver wd = WebDriverFactory.createNewDriver("chrome"); 
   
-  или 
+    или 
   
-  FirefoxOptions options = new FirefoxOptions();
+    FirefoxOptions options = new FirefoxOptions();
   
-  WebDriver wd = WebDriverFactory.createNewDriver("firefox", options);
+    WebDriver wd = WebDriverFactory.createNewDriver("firefox", options);
 
 Шаги теста:
 
