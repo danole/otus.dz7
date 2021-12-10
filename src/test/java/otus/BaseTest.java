@@ -25,10 +25,14 @@ public class BaseTest {
 
     @BeforeEach
     protected void startUp() {
-//        String webDriverName = System.getProperty("wd").toLowerCase();
-//        String options = System.getProperty("options");
+        String webDriverName = System.getProperty("wd").toLowerCase();
+        String options = System.getProperty("options");
         WebDriverFactory webDriverFactory = new WebDriverFactory();
-        driver = webDriverFactory.create("wd");
+        if(options==null){
+            driver = webDriverFactory.create(webDriverName);
+        }else {
+            driver = webDriverFactory.create(webDriverName,options);
+        }
         actions = new Actions(driver);
     }
 

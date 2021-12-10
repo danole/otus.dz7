@@ -20,6 +20,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperty "wd", System.getProperty("wd")
+    systemProperty "options", System.getProperty("options")
+    systemProperty "password", System.getProperty("password")
+    systemProperty "login", System.getProperty("login")
 }
 
 compileJava.options.encoding = 'UTF-8'

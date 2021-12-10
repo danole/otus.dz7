@@ -24,10 +24,10 @@ public class LoginPage extends BasePage {
         waitToClickableButton(registrationModalWindow).click();
         logger.info("Открылось модальное окно для регистрации ");
 
-//        String passwordProp = System.getProperty("password");
-//        String loginProp = System.getProperty("login");
-        waitToVisibleElement(email).sendKeys("1990boot1990@gmail.com");
-        waitToVisibleElement(password).sendKeys("test1234");
+        String passwordProp = System.getProperty("password");
+        String loginProp = System.getProperty("login");
+        waitToVisibleElement(email).sendKeys(loginProp);
+        waitToVisibleElement(password).sendKeys(passwordProp);
         waitToVisibleElement(submit).submit();
         logger.info("Вошли в личный кабинет");
         return new MainPage(driver, actions);
